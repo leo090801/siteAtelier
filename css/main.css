@@ -81,6 +81,37 @@ header button {
     border: none;
     background-color: rgba(1, 1, 1, 0%);
 }
+/************lien cliquable********/
+.lien-clickable {
+    display: none;
+    flex-basis: 90%;
+}
+.lien-clickable ul {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    min-width: 90vw;
+    list-style: none;
+    margin-top: 15px;
+    margin-bottom: 8px;
+    padding: 0;
+    gap: 10px;
+}
+.lien-clickable li {
+    display: inline-block;
+    background-color: #2f2f2f;
+    border-radius: 50px;
+    padding: 8px 10px;
+    box-shadow: 3px 3px 3px rgba(78, 78, 78, 70%);
+}
+.lien-clickable li a {
+    display: inline-block;
+    min-height: 100%;
+    font-family: "Hylia-serif", sans-serif;
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
 /************************************
 
         contenue principale
@@ -192,7 +223,7 @@ footer a:hover {
               menu.html
 
 ***********************************/
-nav li {
+#menu-defilant li {
     list-style: none;
     font-family: "Hylia-serif", sans-serif;
     font-weight: 700;
@@ -204,10 +235,10 @@ nav li {
     display: flex;
     box-shadow: 0 4px 2px #2f2f2f;
 }
-nav li:first-child {
+#menu-defilant li:first-child {
     margin-top: 60px;
 }
-nav a {
+#menu-defilant a {
     color: #f2f2f2;
     text-decoration: none;
     margin-top: auto;
@@ -219,10 +250,10 @@ nav a {
     display: flex;
     padding-right: 10px;
 }
-a p {
+#menu-defilant a p {
     align-self: center;
 }
-nav {
+#menu-defilant {
     display: none;
 }
 /************************************
@@ -266,6 +297,16 @@ nav {
     }
     footer {
         background-color: rgba(47, 47, 47, 90%);
+    }
+}
+
+/*liens cliquables pour naviguer entre les pages*/
+@media screen and (min-width: 1012px) {
+    .lien-clickable {
+        display: flex;
+    }
+    .menu-hamburger {
+        display: none;
     }
 }
 /************************************
