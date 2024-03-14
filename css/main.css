@@ -112,6 +112,9 @@ header button {
     text-decoration: none;
     font-size: 1.5rem;
 }
+li.actif {
+    box-shadow: none;
+}
 /************************************
 
         contenue principale
