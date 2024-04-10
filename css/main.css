@@ -45,18 +45,18 @@ article {
 
 *************************************/
 header {
-    background-color: #429D76;
     margin: -8px;
     height: 71px;
     width: 100vw;
-    text-align: center;
+    position: fixed;
+    background-color: #429D76;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     top: 0;
-    position: fixed;
     display: flex;
     justify-content: space-between;
     z-index: 1;
+    box-shadow: 0 4px 3px rgba(70, 70, 70, 70%);
 }
 img.logo {
     height: 62px;
@@ -76,10 +76,6 @@ img.logo {
 }
 #menu-defilant li {
     background-color: #4f4f4f;
-}
-header button {
-    border: none;
-    background-color: rgba(1, 1, 1, 0%);
 }
 /************lien cliquable********/
 .lien-clickable {
@@ -138,7 +134,7 @@ main a:hover {
     text-decoration: underline;
 }
 main img {
-    width: 100%;
+    max-width: 100%;
 }
 main video {
     width: 100%;
@@ -159,16 +155,16 @@ th,
 td {
     border: 1px solid #f2f2f2;
 }
-td {
+main td {
     text-align: center;
 }
-table {
+main table {
     width: 100%;
     background-color: #f2f2f2;
     font-size: 16px;
 }
-td,
-th {
+main td,
+main th {
     background-color: #4f4f4f;
 }
 /************************************/
@@ -284,32 +280,62 @@ footer a:hover {
 
     .zone-texte {
         background-color: rgba(50, 50, 50, 60%);
-        padding: 40px 80px;
+        padding: 40px 70px;
         border-radius: 20px;
         max-width: 1000px;
         margin-right: auto;
         margin-left: auto;
     }
+    h2 {
+        margin-left: -4%;
+    }
     iframe {
         max-height: 472px;
     }
-    .aligne {
-        display: flex;
-        flex-grow: 1;
-        gap: 10px;
-    }
+
     footer {
         background-color: rgba(47, 47, 47, 90%);
     }
+    #menu-defilant li:first-child {
+        margin-top: calc(46px);
+    }
 }
-
+@media screen and (min-width: 700px) {
+    div.aligne {
+        display: flex;
+    }
+    .aligne img {
+        max-width: calc(50% - 5px);
+        margin-right: 5px;
+    }
+    .aligne img:last-child {
+        margin-right: 0;
+    }
+}
 /*liens cliquables pour naviguer entre les pages*/
 @media screen and (min-width: 1012px) {
     .lien-clickable {
-        display: flex;
+        display: inline-block;
+        position: fixed;
+        left: 8px;
+        top: -7px;
+    }
+    img.logo {
+        position: fixed;
+        right: 0;
+        top: -8px;
+    }
+    header {
+        display: block;
     }
     .menu-hamburger {
         display: none;
+    }
+}
+/*menu hamburger pour hauteur trop basse*/
+@media screen and (max-height: 551px) {
+    #menu-defilant {
+        position: absolute;
     }
 }
 /************************************
